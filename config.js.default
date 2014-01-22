@@ -1,0 +1,11 @@
+var config = {};
+
+config.server = '';
+config.username = '';
+config.channels = '';
+config.logFile = '';
+config.errorLogFile = '';
+config.helloMessage = '';
+config.website = '';
+
+module.exports = config;

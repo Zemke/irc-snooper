@@ -1,24 +1,18 @@
+var config = require('./config');
 var irc = require('irc');
 var fs = require('fs');
 
-var SERVER = 'irc.gamesurge.net';
-var USERNAME = 'SnooperBot';
-var CHANNELS = ['#irc-worms-snooper'];
-var LOG_FILE = 'snooped.log';
-var HELLO = 'Hey, I’m a roboter. 24 hours a day, seven days a week, I log all the messages of this channel and direct them to a website for everyone to read them.';
-var WEBSITE = 'http://irc-worms-snooper.herokuapp.com/snooped.log';
-
-var client = new irc.Client(SERVER, USERNAME, {
-  channels: CHANNELS
+var client = new irc.Client(config.server, config.username, {
+  channels: config.channels
 });
 
 /**
  * Log messages in the channel to a file.
  */
 client.addListener('message', function (from, to, message) {
-  fs.appendFile(LOG_FILE, formatMessage(from, message), function (err) {
+  fs.appendFile(config.logFile, formatMessage(from, message), function (err) {
     if (err) {
-      console.log(err);
+      fs.appendFile(config.errorLogFile, err);
     }
   });
 });
@@ -27,8 +21,8 @@ client.addListener('message', function (from, to, message) {
  * Send an information message upon private notifications.
  */
 client.addListener('pm', function (from, message) {
-    client.say(from, HELLO);
-    client.say(from, WEBSITE);
+    client.say(from, config.helloMessage);
+    client.say(from, config.website);
 });
 
 /**
