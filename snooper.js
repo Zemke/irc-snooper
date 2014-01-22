@@ -3,7 +3,7 @@ var irc = require('irc');
 var fs = require('fs');
 
 var client = new irc.Client(config.server, config.username, {
-  channels: config.channels
+  channels: [config.channel]
 });
 
 /**

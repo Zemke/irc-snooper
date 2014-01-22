@@ -1,11 +1,41 @@
+/**
+ * Enter the criteria and rename the file to just config.js.
+ */
 var config = {};
 
-config.server = ''; // IRC server
-config.channels = []; // Channels of server to join
-config.username = ''; // The username to join with 
-config.logFile = ''; // The file to log channels' messages in
-config.errorLogFile = ''; // Log file for possible errors
-config.helloMessage = ''; // Message to return when bot receives a private message
-config.website = ''; // URL of the site to find the log of the bot.
+/**
+ * The IRC server to join.
+ */
+config.server = ''; 
+
+/**
+ * Channel of the server to join.
+ */
+config.channel = '';
+
+/**
+ * The username to join the channel with.
+ */
+config.username = '';
+
+/**
+ * The file to log messages of the channel to.
+ */
+config.logFile = '';
+
+/**
+ * File to log possible errors to.
+ */
+config.errorLogFile = '';
+
+/**
+ * Message to return when the bot receives a private message.
+ */
+config.helloMessage = '';
+
+/**
+ * URL of the website to find the log of the bot.
+ */
+config.website = '';
 
 module.exports = config;
