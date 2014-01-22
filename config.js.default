@@ -1,11 +1,11 @@
 var config = {};
 
-config.server = '';
-config.username = '';
-config.channels = '';
-config.logFile = '';
-config.errorLogFile = '';
-config.helloMessage = '';
-config.website = '';
+config.server = ''; // IRC server
+config.channels = []; // Channels of server to join
+config.username = ''; // The username to join with 
+config.logFile = ''; // The file to log channels' messages in
+config.errorLogFile = ''; // Log file for possible errors
+config.helloMessage = ''; // Message to return when bot receives a private message
+config.website = ''; // URL of the site to find the log of the bot.
 
 module.exports = config;
