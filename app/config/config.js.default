@@ -1,0 +1,43 @@
+/**
+ * Enter the criteria and rename the file to just config.js.
+ */
+var config = {};
+
+/**
+ * The IRC server to join.
+ */
+config.server = ''; 
+
+/**
+ * Channel of the server to join.
+ */
+config.channel = '';
+
+/**
+ * The username to join the channel with.
+ */
+config.username = 'SnooperBot';
+
+/**
+ * The file to log messages of the channel to.
+ */
+config.logFile = __dirname + '/../util/messages.log';
+
+/**
+ * Message to return when the bot receives a private message.
+ */
+config.helloMessage = 'Hey, I’m a robot. 24 hours a day, seven days a week, I log all the messages of this channel for everyone to read them. So that whenever you’ve not been online you can still see what was happening.';
+
+/**
+ * The GitHub repository URL.
+ */
+config.tellAboutContribution = 'This is an open source project hosted at GitHub to which you can contribute. http://github.com/Zemke/irc-snooper';
+
+/**
+ * URL of the website to find the log of the bot.
+ */
+config.website = '';
+
+module.exports = config;
+
+

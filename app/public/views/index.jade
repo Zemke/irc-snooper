@@ -1,0 +1,15 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/css/style.css')
+		script(type='text/javascript', src='js/socket.io.js')
+		script(type='text/javascript', src='js/analytics.js')
+		script(type='text/javascript', src='js/refresh.js')
+
+	body
+		a(href='https://github.com/Zemke/irc-snooper')
+			img(id='github-ribbon', src='https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png', alt='For me on GitHub')
+
+		- for (var i = messages.length - 1; i >= 0; i--)
+			div= messages[i]

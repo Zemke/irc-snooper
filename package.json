@@ -1,0 +1,30 @@
+{
+  "name": "irc-snooper",
+  "version": "0.1.0",
+  "description": "An IRC client that will log public messages.",
+  "main": "web.js",
+  "dependencies": {
+    "irc": "~0.3.6",
+    "logfmt": "~0.18.1",
+    "express": "~3.4.8",
+    "jade": "~1.1.5",
+    "angular": "~1.2.7",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zemke/irc-snooper.git"
+  },
+  "keywords": [
+    "irc",
+    "client"
+  ],
+  "author": "Florian Zemke",
+  "license": "GPLv2",
+  "readmeFilename": "README.md",
+  "gitHead": "73efbc7140fcd44dd6360dd971696cb52e2f04c4"
+}
