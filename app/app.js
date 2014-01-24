@@ -1,7 +1,11 @@
 var fs = require('fs');
 var config = require('./config/config');
 
-fs.writeFileSync(config.logFile, '\n');
+fs.exists(config.logFile, function(exists) {
+  if (!exists) {
+    fs.writeFileSync(config.logFile, '\n');
+  }
+});
 
 var express = require('express');
 var app = express();
