@@ -5,9 +5,8 @@ var port = Number(process.env.PORT || 5000);
 var environment = require('./config/environment')(app, express, port);
 var controller = require('./controller');
 var routes = require('./config/routes')(app);
+var snooper = require('./util/snooper')();
 
-var server = app.listen(port, function() {
+app.listen(port, function() {
   console.log('Listening on port ' + port);
 });
-
-var snooper = require('./util/snooper')(server);

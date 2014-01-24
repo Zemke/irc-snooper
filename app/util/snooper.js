@@ -2,9 +2,7 @@ var config = require('./../config/config');
 var irc = require('irc');
 var fs = require('fs');
 
-module.exports = function (server) {
-  var io = require('socket.io').listen(server);
-
+module.exports = function () {
   /**
    * Initializing the client, joining the server and channel.
    */
@@ -20,12 +18,6 @@ module.exports = function (server) {
       if (err) {
         console.error(err);
       }
-    });
-
-    io.sockets.on('connection', function (socket) {
-      socket.on('another', function (data) {
-        socket.emit('news', { message: data });
-      });
     });
   });
 
