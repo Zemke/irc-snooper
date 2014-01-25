@@ -5,7 +5,6 @@
   "main": "web.js",
   "dependencies": {
     "irc": "~0.3.6",
-    "logfmt": "~0.18.1",
     "express": "~3.4.8",
     "jade": "~1.1.5"
   },
