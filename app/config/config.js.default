@@ -11,7 +11,7 @@ config.server = '';
 /**
  * Channel of the server to join.
  */
-config.channels = [];
+config.channel = '';
 
 /**
  * The username to join the channel with.

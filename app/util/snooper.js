@@ -7,7 +7,7 @@ module.exports = function () {
    * Initializing the client, joining the server and channel.
    */
   var client = new irc.Client(config.server, config.username, {
-    channels: config.channels
+    channels: [config.channel]
   });
 
   /**
