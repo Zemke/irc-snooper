@@ -13,7 +13,7 @@ module.exports = function () {
   /**
    * Log messages in the channel to a file.
    */
-  client.addListener('message', function (from, to, message) {
+  client.addListener('message' + config.channel, function (from, message) {
     fs.appendFile(config.logFile, formatMessage(from, message), function (err) {
       if (err) {
         console.error(err);
